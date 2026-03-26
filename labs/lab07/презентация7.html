@@ -1,0 +1,818 @@
+<h1 id="section"></h1>
+<p>Автор: Борисова Ксения Михайловна Преподаватель: Кулябов Дмитрий
+Сергеевич профессор * профессор кафедры теории вероятностей и
+кибербезопасности * Российский университет дружбы народов им. П. Лумумбы
+* <a href="mailto:kulyabov-ds@rudn.ru">kulyabov-ds@rudn.ru</a> * <a
+href="https://yamadharma.github.io/ru/"
+class="uri">https://yamadharma.github.io/ru/</a></p>
+<p><strong>Информация о докладчике</strong></p>
+<p><img src="photo_5280798776362735899_y.jpg" width="178" alt="рис 1" />
+Студент НБИбд-01-25</p>
+<hr />
+<h1 id="цель-работы">Цель работы</h1>
+<p>Ознакомление с файловой системой Linux, её структурой, именами и
+содержанием каталогов. Приобретение практических навыков по применению
+команд для работы с файлами и каталогами, по управлению процессами (и
+работами), по проверке исполь- зования диска и обслуживанию файловой
+системы.</p>
+<hr />
+<h1 id="задание">Задание</h1>
+<ol type="1">
+<li>Выполните все примеры, приведённые в первой части описания
+лабораторной работы.</li>
+<li>Выполните следующие действия, зафиксировав в отчёте по лабораторной
+работе используемые при этом команды и результаты их выполнения: 2.1.
+Скопируйте файл /usr/include/sys/io.h в домашний каталог и назовите его
+equipment. Если файла io.h нет, то используйте любой другой файл в
+каталоге /usr/include/sys/ вместо него. 2.2. В домашнем каталоге
+создайте директорию ~/ski.plases. 2.3. Переместите файл equipment в
+каталог ~/ski.plases. 2.4. Переименуйте файл ~/ski.plases/equipment в
+~/ski.plases/equiplist. 2.5. Создайте в домашнем каталоге файл abc1 и
+скопируйте его в каталог ~/ski.plases, назовите его equiplist2. 2.6.
+Создайте каталог с именем equipment в каталоге ~/ski.plases. 2.7.
+Переместите файлы ~/ski.plases/equiplist и equiplist2 в каталог
+~/ski.plases/equipment. 2.8. Создайте и переместите каталог ~/newdir в
+каталог ~/ski.plases и назовите его plans.</li>
+<li>Определите опции команды chmod, необходимые для того, чтобы
+присвоить перечис- ленным ниже файлам выделенные права доступа, считая,
+что в начале таких прав нет: 3.1. drwxr–r– … australia 3.2. drwx–x–x …
+play 3.3. -r-xr–r– … my_os 3.4. -rw-rw-r– … feathers При необходимости
+создайте нужные файлы.</li>
+<li>Проделайте приведённые ниже упражнения, записывая в отчёт по
+лабораторной работе используемые при этом команды: 4.1. Просмотрите
+содержимое файла /etc/password. 4.2. Скопируйте файл ~/feathers в файл
+~/file.old. 4.3. Переместите файл ~/file.old в каталог ~/play. 4.4.
+Скопируйте каталог ~/play в каталог ~/fun. 4.5. Переместите каталог
+~/fun в каталог ~/play и назовите его games. 4.6. Лишите владельца файла
+~/feathers права на чтение. 4.7. Что произойдёт, если вы попытаетесь
+просмотреть файл ~/feathers командой cat? 4.8. Что произойдёт, если вы
+попытаетесь скопировать файл ~/feathers? 4.9. Дайте владельцу файла
+~/feathers право на чтение. 4.10. Лишите владельца каталога ~/play права
+на выполнение. 4.11. Перейдите в каталог ~/play. Что произошло? 4.12.
+Дайте владельцу каталога ~/play право на выполнение.</li>
+<li>Прочитайте man по командам mount, fsck, mkfs, kill и кратко их
+охарактеризуйте, приведя примеры</li>
+</ol>
+<hr />
+<h1 id="выполнение-лабораторной-работы">Выполнение лабораторной
+работы</h1>
+<p>Создаю текстовый файл</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-05-47.png"
+alt="рис1" />
+<figcaption aria-hidden="true">рис1</figcaption>
+</figure>
+<hr />
+<p>Копирую файл из системной папки к себе</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-06-39.png"
+alt="рис2" />
+<figcaption aria-hidden="true">рис2</figcaption>
+</figure>
+<hr />
+<p>Создаю новую директорию</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-07-24.png"
+alt="рис3" />
+<figcaption aria-hidden="true">рис3</figcaption>
+</figure>
+<hr />
+<p>Перемещаю файл в только что созданную директорию</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-08-04.png"
+alt="рис4" />
+<figcaption aria-hidden="true">рис4</figcaption>
+</figure>
+<hr />
+<p>Переименовываю файл</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-09-07.png"
+alt="рис5" />
+<figcaption aria-hidden="true">рис5</figcaption>
+</figure>
+<hr />
+<p>Копирую файл и меняю название</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-10-08.png"
+alt="рис6" />
+<figcaption aria-hidden="true">рис6</figcaption>
+</figure>
+<hr />
+<p>Создаю папку eguipment внутри папки ski.plases</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-10-44.png"
+alt="рис7" />
+<figcaption aria-hidden="true">рис7</figcaption>
+</figure>
+<hr />
+<p>Перемещаю файла equiplist и equiplist 2 в ski.plases/equipment</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-12-06.png"
+alt="рис8" />
+<figcaption aria-hidden="true">рис8</figcaption>
+</figure>
+<hr />
+<p>Создаю новую директорию</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-13-11.png"
+alt="рис9" />
+<figcaption aria-hidden="true">рис9</figcaption>
+</figure>
+<hr />
+<p>Перемещаю директорию в ski.plases и переименовываю ее в plans</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-14-12.png"
+alt="рис10" />
+<figcaption aria-hidden="true">рис10</figcaption>
+</figure>
+<hr />
+<p>Создаю папку australia и проверяю ее права по умолчанию</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-14-48.png"
+alt="рис11" />
+<figcaption aria-hidden="true">рис11</figcaption>
+</figure>
+<hr />
+<p>Устанавливаю права</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-15-54.png"
+alt="рис12" />
+<figcaption aria-hidden="true">рис12</figcaption>
+</figure>
+<hr />
+<p>Создаю папки и устанавливаю нужные права по заданию</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-17-06.png"
+alt="рис13" />
+<figcaption aria-hidden="true">рис13</figcaption>
+</figure>
+<hr />
+<p>Смотрю файл passwd</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-18-17.png"
+alt="рис14" />
+<figcaption aria-hidden="true">рис14</figcaption>
+</figure>
+<hr />
+<p>Копирую файл feathers в file.old</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-19-05.png"
+alt="рис15" />
+<figcaption aria-hidden="true">рис15</figcaption>
+</figure>
+<hr />
+<p>Перемещаю file.old в play</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-20-09.png"
+alt="рис16" />
+<figcaption aria-hidden="true">рис16</figcaption>
+</figure>
+<hr />
+<p>Рекурсивно копирую play в fun</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-21-13.png"
+alt="рис17" />
+<figcaption aria-hidden="true">рис17</figcaption>
+</figure>
+<hr />
+<p>Перемещаю папку fun в play и переименовываю ее</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-22-22.png"
+alt="рис18" />
+<figcaption aria-hidden="true">рис18</figcaption>
+</figure>
+<hr />
+<p>Лишаю feathers прав на чтение</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-23-34.png"
+alt="рис19" />
+<figcaption aria-hidden="true">рис19</figcaption>
+</figure>
+<hr />
+<p>Пытаюсь просмотреть feathers</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-24-30.png"
+alt="рис20" />
+<figcaption aria-hidden="true">рис20</figcaption>
+</figure>
+<hr />
+<p>Пытаюсь скопировать feathers в другой файл</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-25-19.png"
+alt="рис21" />
+<figcaption aria-hidden="true">рис21</figcaption>
+</figure>
+<hr />
+<p>Возвращаю feathers права на чтение</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-26-38.png"
+alt="рис22" />
+<figcaption aria-hidden="true">рис22</figcaption>
+</figure>
+<hr />
+<p>Лишаю play права на выполнение</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-27-33.png"
+alt="рис23" />
+<figcaption aria-hidden="true">рис23</figcaption>
+</figure>
+<hr />
+<p>Возвращаю play право на выполнение</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-28-46.png"
+alt="рис24" />
+<figcaption aria-hidden="true">рис24</figcaption>
+</figure>
+<hr />
+<p>Открываю руководста по командам</p>
+<figure>
+<img src="images/Снимок%20экрана%20от%202026-03-26%2018-28-59.png"
+alt="рис25" />
+<figcaption aria-hidden="true">рис25</figcaption>
+</figure>
+<p>–</p>
+<p><strong>Команда mount</strong></p>
+<p>Назначение: Команда mount используется для монтирования файловых
+систем. Она присоединяет файловую систему, находящуюся на каком-либо
+устройстве (например, жёстком диске, USB-накопителе), к определённому
+каталогу (точке монтирования) в иерархии файловой системы. После этого
+содержимое устройства становится доступным для просмотра и работы.</p>
+<p>Пример использования: mount /dev/sdb1 /mnt/usb</p>
+<p>Данная команда монтирует устройство /dev/sdb1 (например, USB-флешку)
+в каталог /mnt/usb. После этого файлы на флешке будут доступны по пути
+/mnt/usb.</p>
+<hr />
+<p><strong>Команда fsck</strong></p>
+<p>Назначение: Команда fsck (file system check) предназначена для
+проверки и восстановления целостности файловой системы. Она анализирует
+файловую систему на наличие ошибок и при возможности исправляет их.
+Обычно используется при сбоях в работе системы или неправильном
+отключении накопителя.</p>
+<p>Пример использования: fsck /dev/sda1</p>
+<p>Данная команда проверяет файловую систему на устройстве /dev/sda1.
+Если будут найдены ошибки, утилита предложит их исправить (в зависимости
+от указанных опций).</p>
+<hr />
+<p><strong>Команда mkfs</strong></p>
+<p>Назначение: Команда mkfs (make file system) используется для создания
+файловой системы на устройстве (например, на жёстком диске или разделе).
+Перед использованием нового накопителя его необходимо отформатировать с
+помощью этой команды. Существуют её разновидности для разных типов
+файловых систем, например mkfs.ext4, mkfs.ntfs.</p>
+<p>Пример использования: mkfs.ext4 /dev/sdb1</p>
+<p>Данная команда создаёт файловую систему типа ext4 на устройстве
+/dev/sdb1. Все данные, которые были на этом разделе, будут удалены.</p>
+<hr />
+<p><strong>Команда kill</strong></p>
+<p>Назначение: Команда kill используется для отправки сигналов
+процессам. Чаще всего применяется для завершения (остановки) процессов.
+Каждому процессу присвоен уникальный идентификатор (PID). С помощью kill
+можно отправить процессу сигнал, например, сигнал SIGTERM (мягкое
+завершение) или SIGKILL (принудительное завершение).</p>
+<p>Пример использования: kill -9 1234</p>
+<p>Данная команда отправляет процессу с идентификатором PID 1234 сигнал
+SIGKILL (опция -9), что приводит к принудительному и немедленному
+завершению этого процесса.</p>
+<h1 id="ответы-на-вопросы">Ответы на вопросы</h1>
+<h3
+id="дайте-характеристику-каждой-файловой-системе-существующей-на-жёстком-диске-компьютера-на-котором-вы-выполняли-лабораторную-работу.">1.
+Дайте характеристику каждой файловой системе, существующей на жёстком
+диске компьютера, на котором вы выполняли лабораторную работу.</h3>
+<p>На компьютере, где выполнялась лабораторная работа, установлена
+операционная система Fedora. В Fedora по умолчанию используется файловая
+система <strong>Btrfs</strong> (начиная с версии Fedora 33) .</p>
+<p><strong>Характеристика Btrfs:</strong> - Поддерживает создание
+“снимков” (snapshots) и клонов файловой системы, что удобно для
+резервного копирования - Обеспечивает проверку целостности данных и
+автоматическое исправление ошибок - Поддерживает динамическое расширение
+и сжатие данных - Позволяет объединять несколько физических устройств в
+одну файловую систему - Имеет встроенные средства для балансировки
+данных между устройствами</p>
+<p>Также в системе могут присутствовать другие типы файловых систем: -
+<strong>proc</strong> — виртуальная файловая система, монтируемая в
+<code>/proc</code>, предоставляет информацию о процессах и состоянии
+системы - <strong>sysfs</strong> — виртуальная ФС в <code>/sys</code>,
+содержит информацию об устройствах и драйверах - <strong>tmpfs</strong>
+— временная ФС, работающая в оперативной памяти (используется в
+<code>/dev</code>, <code>/run</code>, <code>/tmp</code>) -
+<strong>devpts</strong> — виртуальная ФС для псевдотерминалов в
+<code>/dev/pts</code></p>
+<hr />
+<h3
+id="приведите-общую-структуру-файловой-системы-и-дайте-характеристику-каждой-директории-первого-уровня-этой-структуры.">2.
+Приведите общую структуру файловой системы и дайте характеристику каждой
+директории первого уровня этой структуры.</h3>
+<p>В Linux используется иерархическая структура файловой системы с
+корнем в каталоге <code>/</code>. Все каталоги и файлы находятся внутри
+этого корневого каталога. Структура соответствует стандарту FHS
+(Filesystem Hierarchy Standard) .</p>
+<p><strong>Основные каталоги первого уровня и их
+назначение:</strong></p>
+<table>
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr>
+<th>Каталог</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/bin</code></td>
+<td>Содержит основные пользовательские команды, необходимые для работы
+системы в однопользовательском режиме (например, <code>ls</code>,
+<code>cp</code>, <code>sh</code>)</td>
+</tr>
+<tr>
+<td><code>/boot</code></td>
+<td>Содержит файлы, необходимые для загрузки системы: ядро Linux
+(vmlinuz), образ initrd, загрузчик GRUB</td>
+</tr>
+<tr>
+<td><code>/dev</code></td>
+<td>Содержит файлы устройств, через которые система обращается к
+аппаратному обеспечению (диски, терминалы и т.д.)</td>
+</tr>
+<tr>
+<td><code>/etc</code></td>
+<td>Хранит конфигурационные файлы системы и установленных программ</td>
+</tr>
+<tr>
+<td><code>/home</code></td>
+<td>Содержит домашние каталоги обычных пользователей (для пользователя
+<code>kmborisova</code> это <code>/home/kmborisova</code>)</td>
+</tr>
+<tr>
+<td><code>/lib</code></td>
+<td>Содержит разделяемые библиотеки, необходимые для работы программ из
+<code>/bin</code> и <code>/sbin</code>, а также модули ядра</td>
+</tr>
+<tr>
+<td><code>/media</code></td>
+<td>Точка монтирования для сменных носителей (CD, USB-флешек)</td>
+</tr>
+<tr>
+<td><code>/mnt</code></td>
+<td>Временная точка монтирования для файловых систем, монтируемых
+вручную</td>
+</tr>
+<tr>
+<td><code>/opt</code></td>
+<td>Для установки дополнительного программного обеспечения
+(адд-онов)</td>
+</tr>
+<tr>
+<td><code>/proc</code></td>
+<td>Виртуальная файловая система, предоставляющая информацию о процессах
+и состоянии ядра</td>
+</tr>
+<tr>
+<td><code>/root</code></td>
+<td>Домашний каталог суперпользователя root</td>
+</tr>
+<tr>
+<td><code>/run</code></td>
+<td>Хранит временные данные времени выполнения (PID-файлы, сокеты),
+очищается при перезагрузке</td>
+</tr>
+<tr>
+<td><code>/sbin</code></td>
+<td>Содержит системные команды для администрирования (например,
+<code>fsck</code>, <code>mount</code>, <code>shutdown</code>)</td>
+</tr>
+<tr>
+<td><code>/srv</code></td>
+<td>Для данных, обслуживаемых системой (web-серверы, FTP)</td>
+</tr>
+<tr>
+<td><code>/sys</code></td>
+<td>Виртуальная ФС, предоставляющая информацию об устройствах и
+драйверах ядра</td>
+</tr>
+<tr>
+<td><code>/tmp</code></td>
+<td>Временные файлы (обычно очищаются при перезагрузке)</td>
+</tr>
+<tr>
+<td><code>/usr</code></td>
+<td>Вторичная иерархия для прикладных программ и данных пользователя
+(только для чтения)</td>
+</tr>
+<tr>
+<td><code>/var</code></td>
+<td>Хранит изменяемые данные: логи, почту, спулы принтера, кэш</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3
+id="какая-операция-должна-быть-выполнена-чтобы-содержимое-некоторой-файловой-системы-было-доступно-операционной-системе">3.
+Какая операция должна быть выполнена, чтобы содержимое некоторой
+файловой системы было доступно операционной системе?</h3>
+<p>Чтобы содержимое файловой системы стало доступно операционной
+системе, необходимо выполнить операцию <strong>монтирования
+(mount)</strong> .</p>
+<p>Монтирование — это процесс присоединения файловой системы,
+расположенной на каком-либо устройстве (жёстком диске, разделе,
+USB-накопителе), к определённому каталогу в иерархии файловой системы.
+Этот каталог называется <strong>точкой монтирования</strong> .</p>
+<p><strong>Пример команды монтирования:</strong></p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mount</span> /dev/sdb1 /mnt/usb</span></code></pre></div>
+<p>После выполнения этой команды содержимое устройства
+<code>/dev/sdb1</code> становится доступным по пути
+<code>/mnt/usb</code>. Для отключения файловой системы используется
+команда <code>umount</code> .</p>
+<p><strong>Важные замечания:</strong> - Точка монтирования должна быть
+существующим пустым каталогом - Обычно монтирование требует прав
+суперпользователя (root) - Информация о монтируемых по умолчанию
+файловых системах хранится в файле <code>/etc/fstab</code></p>
+<hr />
+<h3
+id="назовите-основные-причины-нарушения-целостности-файловой-системы.-как-устранить-повреждения-файловой-системы">4.
+Назовите основные причины нарушения целостности файловой системы. Как
+устранить повреждения файловой системы?</h3>
+<p><strong>Основные причины нарушения целостности файловой
+системы:</strong></p>
+<ol type="1">
+<li><strong>Некорректное завершение работы системы</strong> — внезапное
+отключение электропитания, сбой питания, “жёсткая” перезагрузка без
+корректного размонтирования разделов</li>
+<li><strong>Аппаратные сбои</strong> — появление坏 секторов (bad blocks)
+на жёстком диске, нестабильная работа контроллера диска</li>
+<li><strong>Ошибки программного обеспечения</strong> — сбои драйверов,
+ошибки в работе программ, работающих напрямую с диском</li>
+<li><strong>Человеческий фактор</strong> — случайное удаление важных
+системных файлов</li>
+</ol>
+<p><strong>Устранение повреждений:</strong></p>
+<p>Для проверки и восстановления целостности файловой системы
+используется команда <strong><code>fsck</code></strong> (file system
+consistency check) .</p>
+<p><strong>Важное правило:</strong> <code>fsck</code> <strong>нельзя
+запускать на смонтированной</strong> файловой системе, так как это может
+привести к дополнительным повреждениям. Перед проверкой файловую систему
+необходимо размонтировать .</p>
+<p><strong>Примеры использования:</strong></p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Проверка и автоматическое исправление ошибок</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> fsck <span class="at">-a</span> /dev/sda1</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Проверка с подтверждением каждого исправления</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> fsck <span class="at">-y</span> /dev/sda1</span></code></pre></div>
+<p><strong>Особенности проверки корневого раздела (/)</strong>: так как
+его нельзя размонтировать в работающей системе, проверку выполняют либо
+в режиме восстановления (recovery mode), либо с помощью создания файла
+<code>forcefsck</code> с последующей перезагрузкой:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> touch /forcefsck</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> reboot</span></code></pre></div>
+<hr />
+<h3 id="как-создаётся-файловая-система">5. Как создаётся файловая
+система?</h3>
+<p>Для создания файловой системы на устройстве (диске, разделе)
+используется команда <strong><code>mkfs</code></strong> (make
+filesystem) .</p>
+<p><code>mkfs</code> является фронтендом (оболочкой) для утилит,
+специфичных для каждого типа файловой системы: <code>mkfs.ext4</code>,
+<code>mkfs.btrfs</code>, <code>mkfs.xfs</code>, <code>mkfs.vfat</code> и
+других .</p>
+<p><strong>Формат команды:</strong></p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">mkfs</span> [-t тип] устройство</span></code></pre></div>
+<p><strong>Примеры создания файловой системы:</strong></p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Создание файловой системы ext4 на разделе /dev/sdb1</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">mkfs</span> <span class="at">-t</span> ext4 /dev/sdb1</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># То же самое с помощью специфичной команды</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">mkfs.ext4</span> /dev/sdb1</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Создание файловой системы Btrfs</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="ex">mkfs.btrfs</span> /dev/sdc1</span></code></pre></div>
+<p><strong>Важные замечания:</strong> - Создание файловой системы
+<strong>уничтожает все данные</strong>, находившиеся на устройстве -
+Команда требует прав суперпользователя (root) - Тип файловой системы
+можно не указывать, если используется специфичная команда
+(<code>mkfs.ext4</code>) - После создания ФС устройство необходимо
+смонтировать, чтобы начать им пользоваться</p>
+<hr />
+<h3
+id="дайте-характеристику-командам-для-просмотра-текстовых-файлов.">6.
+Дайте характеристику командам для просмотра текстовых файлов.</h3>
+<p>В Linux существует несколько команд для просмотра содержимого
+текстовых файлов, каждая из которых имеет свои особенности :</p>
+<table>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 25%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr>
+<th>Команда</th>
+<th>Описание</th>
+<th>Пример использования</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cat</code></td>
+<td>Выводит содержимое файла целиком на экран. Подходит для небольших
+файлов.</td>
+<td><code>cat file.txt</code></td>
+</tr>
+<tr>
+<td><code>tac</code></td>
+<td>Работает как <code>cat</code>, но выводит строки в обратном порядке
+(с конца)</td>
+<td><code>tac file.txt</code></td>
+</tr>
+<tr>
+<td><code>nl</code></td>
+<td>Выводит содержимое файла с нумерацией строк</td>
+<td><code>nl file.txt</code></td>
+</tr>
+<tr>
+<td><code>more</code></td>
+<td>Постраничный просмотр. Пробел — следующая страница, Enter —
+следующая строка, q — выход</td>
+<td><code>more file.txt</code></td>
+</tr>
+<tr>
+<td><code>less</code></td>
+<td>Более совершенный постраничный просмотр, позволяет прокручивать как
+вперёд, так и назад. Поддерживает поиск</td>
+<td><code>less file.txt</code></td>
+</tr>
+<tr>
+<td><code>head</code></td>
+<td>Выводит первые строки файла (по умолчанию 10)</td>
+<td><code>head -n 20 file.txt</code></td>
+</tr>
+<tr>
+<td><code>tail</code></td>
+<td>Выводит последние строки файла (по умолчанию 10). Полезен для
+просмотра логов</td>
+<td><code>tail -f /var/log/syslog</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Клавиши управления в less/more:</strong> -
+<strong>Space</strong> — следующая страница - <strong>Enter</strong> —
+следующая строка - <strong>b</strong> — предыдущая страница (в less) -
+<strong>/слово</strong> — поиск по файлу - <strong>q</strong> —
+выход</p>
+<hr />
+<h3 id="приведите-основные-возможности-команды-cp-в-linux.">7. Приведите
+основные возможности команды cp в Linux.</h3>
+<p>Команда <code>cp</code> (copy) используется для копирования файлов и
+каталогов .</p>
+<p><strong>Формат команды:</strong></p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="pp">[</span><span class="ss">опции</span><span class="pp">]</span> источник назначение</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="pp">[</span><span class="ss">опции</span><span class="pp">]</span> источник... каталог</span></code></pre></div>
+<p><strong>Основные возможности и опции:</strong></p>
+<table>
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 40%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr>
+<th>Опция</th>
+<th>Описание</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-i</code></td>
+<td>Запрашивает подтверждение перед перезаписью существующего файла</td>
+<td><code>cp -i file1.txt file2.txt</code></td>
+</tr>
+<tr>
+<td><code>-r</code>, <code>-R</code></td>
+<td>Рекурсивное копирование каталогов (копирует всё содержимое)</td>
+<td><code>cp -r dir1/ dir2/</code></td>
+</tr>
+<tr>
+<td><code>-v</code></td>
+<td>Подробный вывод (показывает, что копируется)</td>
+<td><code>cp -v file.txt /tmp/</code></td>
+</tr>
+<tr>
+<td><code>-u</code></td>
+<td>Копирует только если исходный файл новее целевого</td>
+<td><code>cp -u source.txt dest.txt</code></td>
+</tr>
+<tr>
+<td><code>-a</code></td>
+<td>Архивное копирование (сохраняет права, владельца, временные
+метки)</td>
+<td><code>cp -a /home/user /backup/</code></td>
+</tr>
+<tr>
+<td><code>-p</code></td>
+<td>Сохраняет атрибуты файла (права, время)</td>
+<td><code>cp -p file.txt copy.txt</code></td>
+</tr>
+<tr>
+<td><code>-l</code></td>
+<td>Создаёт жёсткие ссылки вместо копирования</td>
+<td><code>cp -l file.txt hardlink.txt</code></td>
+</tr>
+<tr>
+<td><code>-s</code></td>
+<td>Создаёт символические ссылки</td>
+<td><code>cp -s file.txt symlink.txt</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Примеры использования:</strong></p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Копирование файла в текущем каталоге</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> file1.txt file2.txt</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Копирование нескольких файлов в каталог</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> file1.txt file2.txt ~/backup/</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Рекурсивное копирование каталога</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-r</span> /home/user/documents/ /media/backup/</span></code></pre></div>
+<hr />
+<h3 id="приведите-основные-возможности-команды-mv-в-linux.">8. Приведите
+основные возможности команды mv в Linux.</h3>
+<p>Команда <code>mv</code> (move) используется для перемещения и
+переименования файлов и каталогов .</p>
+<p><strong>Формат команды:</strong></p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> <span class="pp">[</span><span class="ss">опции</span><span class="pp">]</span> источник назначение</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> <span class="pp">[</span><span class="ss">опции</span><span class="pp">]</span> источник... каталог</span></code></pre></div>
+<p><strong>Основные возможности и опции:</strong></p>
+<table>
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 40%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr>
+<th>Опция</th>
+<th>Описание</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-i</code></td>
+<td>Запрашивает подтверждение перед перезаписью существующего файла</td>
+<td><code>mv -i file.txt /target/</code></td>
+</tr>
+<tr>
+<td><code>-u</code></td>
+<td>Перемещает только если исходный файл новее целевого</td>
+<td><code>mv -u old.txt new.txt</code></td>
+</tr>
+<tr>
+<td><code>-v</code></td>
+<td>Подробный вывод (показывает, что перемещается)</td>
+<td><code>mv -v file.txt /tmp/</code></td>
+</tr>
+<tr>
+<td><code>-n</code></td>
+<td>Не перезаписывать существующие файлы</td>
+<td><code>mv -n source.txt dest.txt</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Примеры использования:</strong></p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Переименование файла</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> oldname.txt newname.txt</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Перемещение файла в другой каталог</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> file.txt ~/documents/</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Перемещение нескольких файлов в каталог</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> file1.txt file2.txt ~/backup/</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Переименование каталога</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> old_dir new_dir</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Перемещение каталога внутрь другого каталога</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> my_folder /home/user/documents/</span></code></pre></div>
+<p><strong>Важно:</strong> При перемещении файла в пределах одного
+раздела диска <code>mv</code> просто изменяет путь к файлу в файловой
+системе, не перемещая физически данные. При перемещении между разными
+устройствами происходит копирование с последующим удалением оригинала
+.</p>
+<hr />
+<h3 id="что-такое-права-доступа-как-они-могут-быть-изменены">9. Что
+такое права доступа? Как они могут быть изменены?</h3>
+<p><strong>Права доступа</strong> — это механизм, определяющий, какие
+действия (чтение, запись, выполнение) разрешены для различных категорий
+пользователей при работе с файлами и каталогами .</p>
+<p>В Linux права доступа разделяются на три категории пользователей: -
+<strong>u (user)</strong> — владелец файла - <strong>g (group)</strong>
+— группа, к которой принадлежит владелец - <strong>o (others)</strong> —
+все остальные пользователи</p>
+<p>Для каждого объекта (файла или каталога) определяются три типа прав:
+- <strong>r (read)</strong> — чтение - <strong>w (write)</strong> —
+запись - <strong>x (execute)</strong> — выполнение (для файлов) / доступ
+в каталог (для каталогов)</p>
+<p><strong>Просмотр прав доступа:</strong></p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span> имя_файла</span></code></pre></div>
+<p>Вывод будет выглядеть, например, так: <code>-rw-r--r--</code>, где: -
+первый символ <code>-</code> — тип (файл), <code>d</code> — каталог -
+следующие три символа <code>rw-</code> — права владельца - затем три
+<code>r--</code> — права группы - последние три <code>r--</code> — права
+остальных</p>
+<p><strong>Изменение прав доступа</strong> выполняется командой
+<strong><code>chmod</code></strong> (change mode) .</p>
+<p><strong>Символьный способ:</strong></p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> <span class="pp">[</span><span class="ss">категория</span><span class="pp">][</span><span class="ss">оператор</span><span class="pp">][</span><span class="ss">право</span><span class="pp">]</span> файл</span></code></pre></div>
+<ul>
+<li>Категория: <code>u</code>, <code>g</code>, <code>o</code>,
+<code>a</code> (all — все)</li>
+<li>Оператор: <code>+</code> (добавить), <code>-</code> (убрать),
+<code>=</code> (установить точно)</li>
+<li>Право: <code>r</code>, <code>w</code>, <code>x</code></li>
+</ul>
+<p><strong>Примеры:</strong></p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Добавить владельцу право на выполнение</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> u+x script.sh</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Убрать у группы право на запись</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> g-w file.txt</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Установить для всех право только на чтение</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> a=r file.txt</span></code></pre></div>
+<p><strong>Числовой (восьмеричный) способ:</strong> Каждое право имеет
+числовое значение: <code>r=4</code>, <code>w=2</code>, <code>x=1</code>.
+Права задаются трёхзначным числом (владелец/группа/остальные) .</p>
+<p><strong>Примеры:</strong></p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 755 = rwxr-xr-x (владелец: всё, группа: чтение+выполнение, остальные: чтение+выполнение)</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> 755 script.sh</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 644 = rw-r--r-- (владелец: чтение+запись, группа: чтение, остальные: чтение)</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> 644 file.txt</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 700 = rwx------ (только владелец имеет полный доступ)</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> 700 private_dir</span></code></pre></div>
+<h1 id="выводы">Выводы</h1>
+<p>В ходе выполнения лабораторной работы были изучены основные команды
+для работы с файлами и каталогами в операционной системе Linux
+(Fedora).</p>
+<p><strong>Были освоены следующие навыки:</strong></p>
+<ol type="1">
+<li><strong>Работа с файлами и каталогами:</strong>
+<ul>
+<li>Создание, копирование, перемещение и переименование файлов и
+каталогов с помощью команд <code>touch</code>, <code>cp</code>,
+<code>mv</code></li>
+<li>Просмотр содержимого файлов командами <code>cat</code>,
+<code>less</code>, <code>head</code>, <code>tail</code></li>
+</ul></li>
+<li><strong>Управление правами доступа:</strong>
+<ul>
+<li>Изучена структура прав доступа (чтение, запись, выполнение) для
+владельца, группы и остальных пользователей</li>
+<li>Изменение прав доступа с помощью команды <code>chmod</code> в
+символьном и числовом форматах</li>
+<li>Экспериментально подтверждено, что отсутствие права на чтение
+(<code>r</code>) не позволяет просмотреть содержимое файла, а отсутствие
+права на выполнение (<code>x</code>) для каталога делает невозможным
+вход в него</li>
+</ul></li>
+<li><strong>Файловая система:</strong>
+<ul>
+<li>Изучена структура файловой системы Linux, назначение основных
+каталогов первого уровня</li>
+<li>Рассмотрены команды для работы с файловыми системами:
+<code>mount</code> (монтирование), <code>fsck</code> (проверка
+целостности), <code>mkfs</code> (создание файловой системы),
+<code>kill</code> (управление процессами)</li>
+</ul></li>
+<li><strong>Практическое применение:</strong>
+<ul>
+<li>Все примеры, приведённые в методических указаниях, были
+выполнены</li>
+<li>Получены навыки работы с командами в терминале, устранения ошибок
+доступа</li>
+</ul></li>
+</ol>
+<p>Таким образом, цели лабораторной работы достигнуты: приобретены
+практические навыки работы с файловой системой Linux, управления
+файлами, каталогами и правами доступа.</p>
+<h1 id="список-литературы">Список литературы</h1>
+<p>ТУИС. Архитектура компьютеров и операционные системы. Раздел
+“Операционные системы”. Лабораторная работа №7.</p>
+<p>https://esystem.rudn.ru/pluginfile.php/3097171/mod_resource/content/4/005-lab_files.pdf</p>
